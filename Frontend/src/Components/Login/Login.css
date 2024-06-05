@@ -1,0 +1,92 @@
+.login {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: grid;
+}
+
+.login-container {
+  place-self: center;
+  width: max(23vw, 330px);
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeIn 0.5s;
+}
+
+.login-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+.login-title h2 {
+  color: black;
+  font-size: 35px;
+  font-weight: bolder;
+}
+.login-title img {
+  width: 16px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.login-input {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: transparent;
+}
+
+.login-input input {
+  outline: none;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.login-container button {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login-condition {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  margin-top: -15px;
+  background: transparent;
+}
+.login-condition p {
+  font-weight: 500;
+}
+
+.login-condition input {
+  margin-top: 1px;
+}
+
+.login-container p {
+  color: black;
+}
+
+.login p span {
+  color: tomato;
+  font-weight: 500;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  padding-left: 5px;
+}
