@@ -4,6 +4,7 @@
   box-sizing: border-box;
   background-color: rgb(24, 23, 26);
   color: white;
+  scroll-behavior: smooth;
 }
 
 body {
