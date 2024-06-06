@@ -1,0 +1,43 @@
+.placeorfer {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.placeorder-left {
+  width: 100%;
+  max-width: max(30%, 500px);
+}
+
+.placeorder-left .title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.placeorder-left input {
+  margin-bottom: 25px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline-color: tomato;
+  color: white;
+}
+
+.placeorder-left .order-fields {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 1000px) {
+  .placeorfer {
+    flex-direction: column;
+  }
+
+  .placeorder-right {
+    width: 100%;
+    text-align: center;
+  }
+}

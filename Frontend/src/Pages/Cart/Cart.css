@@ -1,0 +1,135 @@
+.cart {
+  margin-top: 100px;
+}
+
+.card-items-title {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  font-size: max(1vw, 12px);
+}
+
+.card-items-item {
+  margin: 10px 0;
+}
+
+.card-items-item img {
+  width: 50px;
+}
+
+.cart hr {
+  height: 1px;
+  border: none;
+  background-color: white;
+}
+
+.card-items-item .cross {
+  cursor: pointer;
+}
+
+.cart-bottom {
+  margin: 0px 6vw;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px rgba(1, 2, 3, 0.6);
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 12vw;
+  align-items: center;
+  background-color: rgb(6, 4, 80);
+}
+
+.cart-total {
+  width: 20vw;
+  background: transparent;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.cart-total h2 {
+  margin-bottom: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  background: transparent;
+}
+.qqqq {
+  background: transparent;
+}
+.cart-total-details p {
+  background: transparent;
+  font-weight: 500;
+}
+
+.cart-total-details b {
+  font-size: 20px;
+  background: transparent;
+  color: rgb(231, 115, 115);
+}
+
+.cart-total button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(3, 87, 125);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cart-promoCode {
+  background: transparent;
+}
+
+.cart-promoCode p {
+  font-size: 20px;
+  padding: 20px 00px;
+}
+
+.promocode-input {
+  background: transparent;
+}
+
+.promocode-input input {
+  padding: 10px;
+  background: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: max(10vw, 150px);
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.promocode-input button {
+  padding: 10px 15px;
+  background: rgb(3, 87, 125);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.cart button:hover {
+  transform: scale(1.05);
+  transition: 0.6s;
+}
+
+@media (max-width: 1000px) {
+  .cart-bottom {
+    flex-direction: column;
+    gap: 0vw;
+  }
+  .cart-bottom h2 {
+    font-size: 30px;
+  }
+  .cart-total {
+    width: 80%;
+  }
+  .cart-promoCode {
+    width: 80%;
+  }
+}

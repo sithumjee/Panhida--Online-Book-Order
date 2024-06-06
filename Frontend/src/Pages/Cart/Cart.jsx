@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../Context/StoreCntext";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, TotalCartAmount } =
+    useContext(StoreContext);
+
+  const navigate = useNavigate();
 
   return (
     <div className="cart">
@@ -19,19 +23,64 @@ const Cart = () => {
         <br />
         <hr />
 
-        {food_list.map((item, index) => {
-          if (cartItems[index.id] > 0) {
-            return (
-              <>
-                <div className="card-items-title card-items-item">
-                  <p>{item.name}</p>
-                </div>
-                ;
-              </>
-            );
-          }
-        })}
-        <hr />
+        <div className="card-items-container">
+          {food_list.map((item, index) => {
+            if (cartItems[item.id] > 0) {
+              return (
+                <>
+                  <div key={index} className="card-items-title card-items-item">
+                    <img src={item.image} alt="" />
+                    <p>{item.name}</p>
+                    <p>Rs{item.price}</p>
+                    <p>{cartItems[item.id]}</p>
+                    <p>Rs{item.price * cartItems[item.id]}</p>
+                    <p
+                      onClick={() => removeFromCart(item.id)}
+                      className="cross"
+                    >
+                      X
+                    </p>
+                  </div>
+                  <hr />
+                </>
+              );
+            }
+            return null; // Remember to return null if the condition is not met
+          })}
+        </div>
+
+        <div className="cart-bottom">
+          <div className="cart-total">
+            <h2>cart-total</h2>
+            <div className="qqqq">
+              <div className="cart-total-details">
+                <p>Subtotal</p>
+                <p>{TotalCartAmount()}</p>
+              </div>
+              <hr />
+              <div className="cart-total-details">
+                <p>Delivery Fee</p>
+                <p>{250}</p>
+              </div>
+              <hr />
+              <div className="cart-total-details">
+                <b>Total</b>
+                <b>{TotalCartAmount() + 250}</b>
+              </div>
+            </div>
+            <button onClick={() => navigate("/order")}>
+              Proceed to checkout
+            </button>
+          </div>
+
+          <div className="cart-promoCode">
+            <p>Enter the promo code</p>
+            <div className="promocode-input">
+              <input type="text" placeholder="Enter code" />
+              <button>Submit</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
