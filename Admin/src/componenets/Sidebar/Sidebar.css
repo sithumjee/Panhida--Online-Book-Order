@@ -35,3 +35,8 @@
     display: none;
   }
 }
+
+.option.active {
+  background-color: rgb(44, 42, 42);
+  border-color: tomato;
+}
