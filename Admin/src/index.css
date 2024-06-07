@@ -31,3 +31,7 @@ hr {
   gap: 10px;
   background: transparent;
 }
+
+.cursor {
+  cursor: pointer;
+}

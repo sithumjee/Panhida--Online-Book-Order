@@ -32,7 +32,7 @@
 .add-price-category {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: max(20px, 40px);
 }
 
 .add-price-category select,
