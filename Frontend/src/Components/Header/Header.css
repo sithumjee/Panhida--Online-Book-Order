@@ -16,16 +16,10 @@
   bottom: 10%;
   left: 6vw;
   animation: fadeIn 2s;
-  background: transparent;
 }
 
 h2 {
-  background: transparent;
   font-size: 50px;
-}
-
-p {
-  background: transparent;
 }
 
 /*==================media=======================*/

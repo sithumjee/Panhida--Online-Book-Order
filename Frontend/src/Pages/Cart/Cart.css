@@ -41,7 +41,7 @@
 
 .cart-total {
   width: 20vw;
-  background: transparent;
+
   padding-top: 10px;
   padding-bottom: 40px;
 }
@@ -56,19 +56,16 @@
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
-  background: transparent;
 }
 .qqqq {
-  background: transparent;
 }
 .cart-total-details p {
-  background: transparent;
   font-weight: 500;
 }
 
 .cart-total-details b {
   font-size: 20px;
-  background: transparent;
+
   color: rgb(231, 115, 115);
 }
 
@@ -82,7 +79,6 @@
 }
 
 .cart-promoCode {
-  background: transparent;
 }
 
 .cart-promoCode p {
@@ -91,7 +87,6 @@
 }
 
 .promocode-input {
-  background: transparent;
 }
 
 .promocode-input input {
