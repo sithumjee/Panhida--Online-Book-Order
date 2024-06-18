@@ -1,7 +1,6 @@
 import userModel from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import Validator from "validator";
 import validator from "validator";
 
 const createToken = (id) => {
@@ -17,19 +16,24 @@ const loginUser = async (req, res) => {
     const user = await userModel.findOne({ email });
 
     if (!user) {
-      res.json({ success: false, message: "User doesn't exists" });
+      return res
+        .status(401)
+        .json({ success: false, message: "User doesn't exist" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
-      return res.json({ success: false, message: "Incorrect Credentials" });
+      return res
+        .status(401)
+        .json({ success: false, message: "Incorrect Credentials" });
     }
 
     const token = createToken(user._id);
     res.json({ success: true, token });
   } catch (error) {
-    res.json({ success: false, message: "Error" });
+    console.error(error);
+    res.status(500).json({ success: false, message: "Error" });
   }
 };
 

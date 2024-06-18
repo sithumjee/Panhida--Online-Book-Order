@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Login.css";
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../../Context/StoreCntext";
@@ -13,6 +13,14 @@ const Login = ({ setShowLogin }) => {
     password: "",
   });
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setToken(token);
+      setShowLogin(false);
+    }
+  }, []);
+
   const onChangeHandler = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -21,11 +29,10 @@ const Login = ({ setShowLogin }) => {
   };
 
   const onLogin = async (event) => {
-    event.preventDefault(); // Corrected method name
+    event.preventDefault();
 
     let newUrl = url;
     if (currentState === "Login") {
-      // Corrected case for "Login"
       newUrl += "/api/user/login";
     } else {
       newUrl += "/api/user/register";
