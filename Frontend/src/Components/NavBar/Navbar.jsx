@@ -62,7 +62,7 @@ const Navbar = ({ setShowLogin }) => {
           <Link to="/cart">
             <img src={assets.basket_icon} alt="" />
           </Link>
-          <div className={TotalCartAmount() === 0 ? "" : "dot"}></div>
+          <div className={TotalCartAmount() > 0 ? "dot" : ""}></div>
         </div>
         {!token ? (
           <button onClick={() => setShowLogin(true)}> sign in</button>

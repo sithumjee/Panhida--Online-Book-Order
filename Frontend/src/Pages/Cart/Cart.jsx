@@ -25,17 +25,17 @@ const Cart = () => {
 
         <div className="card-items-container">
           {food_list.map((item, index) => {
-            if (cartItems[item.id] > 0) {
+            if (cartItems[item._id] > 0) {
               return (
                 <>
                   <div key={index} className="card-items-title card-items-item">
                     <img src={url + "/images/" + item.image} alt="" />
                     <p>{item.name}</p>
                     <p>Rs{item.price}</p>
-                    <p>{cartItems[item.id]}</p>
-                    <p>Rs{item.price * cartItems[item.id]}</p>
+                    <p>{cartItems[item._id]}</p>
+                    <p>Rs{item.price * cartItems[item._id]}</p>
                     <p
-                      onClick={() => removeFromCart(item.id)}
+                      onClick={() => removeFromCart(item._id)}
                       className="cross"
                     >
                       X
@@ -60,12 +60,12 @@ const Cart = () => {
               <hr />
               <div className="cart-total-details">
                 <p>Delivery Fee</p>
-                <p>{250}</p>
+                <p>{Math.round(TotalCartAmount() * 0.2)}</p>
               </div>
               <hr />
               <div className="cart-total-details">
                 <b>Total</b>
-                <b>{TotalCartAmount() + 250}</b>
+                <b>{TotalCartAmount() + Math.round(TotalCartAmount() * 0.2)}</b>
               </div>
             </div>
             <button onClick={() => navigate("/order")}>
