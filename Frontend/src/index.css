@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   color: white;
   scroll-behavior: smooth;
+  font-family: Outfit;
 }
 
 body {
@@ -17,7 +20,7 @@ a {
 }
 
 .app {
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
