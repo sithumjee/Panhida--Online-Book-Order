@@ -9,11 +9,25 @@ const Navbar = ({ setShowLogin }) => {
   const { TotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
+  //reducing the opacity when scrolling-------------------------------------------------------------------------------------
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 0) {
+      navbar.classList.add("navbar-scrolled");
+    } else {
+      navbar.classList.remove("navbar-scrolled");
+    }
+  });
+
+  //------------------------------------------------------------------------------------------------------------------------
+
+  //removing token from the local storage-----------------------------------------------------------------------------------
   const logOut = () => {
     localStorage.removeItem("token");
     setToken(""); // Add this line
     navigate("/");
   };
+  //------------------------------------------------------------------------------------------------------------------------
 
   return (
     <div className="navbar">
