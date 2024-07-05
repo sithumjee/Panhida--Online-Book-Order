@@ -16,9 +16,7 @@ const Header = () => {
       />
       <div className="header-content">
         <div className="header-left">
-          <h1>
-            Welcome to <span>PANHIDA</span>
-          </h1>
+          <img src={assets.logoCircle} alt="" />
           <p>
             Discover a world of literature at your fingertips. Panhida is your
             one-stop online ebook shop, where you can browse and order books

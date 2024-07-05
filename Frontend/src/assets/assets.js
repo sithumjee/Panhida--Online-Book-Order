@@ -35,6 +35,7 @@ import logout_icon from "./logout_icon.png";
 import parcel_icon from "./parcel_icon.png";
 import HeaderBg from "./headerBg.mp4";
 import topicImage from "./topicImage.png";
+import logoCircle from "./logoCircle.png";
 
 export const assets = {
   logo,
@@ -58,6 +59,7 @@ export const assets = {
   parcel_icon,
   HeaderBg,
   topicImage,
+  logoCircle,
 };
 
 export const menu_list = [

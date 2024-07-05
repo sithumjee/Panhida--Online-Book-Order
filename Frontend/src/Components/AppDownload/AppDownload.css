@@ -3,7 +3,11 @@
   margin-top: 100px;
   font-size: max(3vw, 20px);
   text-align: center;
-  font-weight: 500;
+}
+
+.appDownload p {
+  font-weight: 600;
+  color: black;
 }
 
 .download-platforms {

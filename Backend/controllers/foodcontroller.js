@@ -8,6 +8,7 @@ const addFood = async (req, res) => {
 
   const food = new foodModel({
     name: req.body.name,
+    authorName: req.body.authorName,
     description: req.body.description,
     price: req.body.price,
     category: req.body.category,

@@ -6,8 +6,8 @@ const AppDownload = () => {
   return (
     <div className="appDownload" id="appDownload">
       <p>
-        Some text <br />
-        aplnfdvv fvff
+        Download <br />
+        our Mobile Application
       </p>
 
       <div className="download-platforms">

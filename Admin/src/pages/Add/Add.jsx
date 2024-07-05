@@ -10,9 +10,10 @@ const Add = ({ url }) => {
 
   const [data, setData] = useState({
     name: "",
+    authorName: "",
     description: "",
     price: "",
-    category: "category1",
+    category: "Fiction",
   });
 
   const onChangeHandler = (event) => {
@@ -25,6 +26,7 @@ const Add = ({ url }) => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("name", data.name);
+    formData.append("authorName", data.authorName);
     formData.append("description", data.description);
     formData.append("price", Number(data.price));
     formData.append("category", data.category);
@@ -33,6 +35,7 @@ const Add = ({ url }) => {
     if (response.data.success) {
       setData({
         name: "",
+        authorName: "",
         description: "",
         price: "",
         category: "category1",
@@ -74,6 +77,17 @@ const Add = ({ url }) => {
             placeholder="Enter"
           />
         </div>
+
+        <div className="add-authorName flex-col">
+          <p>Author Name</p>
+          <input
+            onChange={onChangeHandler}
+            value={data.authorName}
+            type="text"
+            name="authorName"
+            placeholder="Enter"
+          />
+        </div>
         <div className="add-description flex-col">
           <p>Product description</p>
           <textarea
@@ -94,14 +108,24 @@ const Add = ({ url }) => {
               value={data.category}
               name="category"
             >
-              <option value="category1"> category1</option>
-              <option value="category2"> category2</option>
-              <option value="category3"> category3</option>
-              <option value="category4"> category4</option>
-              <option value="category5"> category5</option>
-              <option value="category6"> category6</option>
-              <option value="category7"> category7</option>
-              <option value="category8"> category8</option>
+              <option value="Fiction"> Fiction</option>
+              <option value="Romance"> Romance</option>
+              <option value="Mystery and Triller"> Mystery and Triller</option>
+              <option value="History"> History</option>
+              <option value="Personal Development">
+                {" "}
+                Personal Development
+              </option>
+              <option value="Business and Money"> Business and Money</option>
+              <option value="Cookbooks"> Cookbooks</option>
+              <option value="Children"> Children</option>
+              <option value="Adventure"> Adventure</option>
+              <option value="Health and Wellness"> Health and Wellness</option>
+              <option value="Philosophy"> Philosophy</option>
+              <option value="Art and Photography"> Art and Photography</option>
+              <option value="Poetry"> Poetry</option>
+              <option value="Religion"> Religion</option>
+              <option value="Sports"> Sports</option>
             </select>
           </div>
 
