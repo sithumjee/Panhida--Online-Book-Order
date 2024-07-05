@@ -2,15 +2,21 @@ import basket_icon from "./basket_icon.png";
 import logo from "./logo.png";
 import header_img from "./header_img.png";
 import search_icon from "./search_icon.png";
-import menu_1 from "./menu_1.png";
-import menu_2 from "./menu_2.png";
-import menu_3 from "./menu_3.png";
-import menu_4 from "./menu_4.png";
-import menu_5 from "./menu_5.png";
-import menu_6 from "./menu_6.png";
-import menu_7 from "./menu_7.png";
-import menu_8 from "./menu_8.png";
-
+import fiction from "./navigatationImages/fiction.jpg";
+import romance from "./navigatationImages/romance.jpg";
+import adventure from "./navigatationImages/adventure.jpg";
+import art from "./navigatationImages/art.jpg";
+import business from "./navigatationImages/bussiness.jpg";
+import children from "./navigatationImages/children.jpg";
+import cookbooks from "./navigatationImages/cookbooks.jpg";
+import health from "./navigatationImages/health.jpg";
+import history from "./navigatationImages/history.jpg";
+import mistery from "./navigatationImages/mistory.jpg";
+import personalDevelopment from "./navigatationImages/personalDevelopment.jpg";
+import philosophy from "./navigatationImages/philosophy.jpg";
+import poetry from "./navigatationImages/poetry.jpg";
+import religion from "./navigatationImages/religion.jpg";
+import sports from "./navigatationImages/sports.jpg";
 
 import add_icon_white from "./add_icon_white.png";
 import add_icon_green from "./add_icon_green.png";
@@ -27,6 +33,8 @@ import profile_icon from "./profile_icon.png";
 import bag_icon from "./bag_icon.png";
 import logout_icon from "./logout_icon.png";
 import parcel_icon from "./parcel_icon.png";
+import HeaderBg from "./headerBg.mp4";
+import topicImage from "./topicImage.png";
 
 export const assets = {
   logo,
@@ -48,40 +56,69 @@ export const assets = {
   logout_icon,
   bag_icon,
   parcel_icon,
+  HeaderBg,
+  topicImage,
 };
 
 export const menu_list = [
   {
-    menu_name: "category1",
-    menu_image: menu_1,
+    menu_name: "Fiction",
+    menu_image: fiction,
   },
   {
-    menu_name: "category2",
-    menu_image: menu_2,
+    menu_name: "Romance",
+    menu_image: romance,
   },
   {
-    menu_name: "category3",
-    menu_image: menu_3,
+    menu_name: "Mystery and Triller",
+    menu_image: mistery,
   },
   {
-    menu_name: "category4",
-    menu_image: menu_4,
+    menu_name: "History",
+    menu_image: history,
   },
   {
-    menu_name: "category5",
-    menu_image: menu_5,
+    menu_name: "Personal Development",
+    menu_image: personalDevelopment,
   },
   {
-    menu_name: "category6",
-    menu_image: menu_6,
+    menu_name: "Business and Money",
+    menu_image: business,
   },
   {
-    menu_name: "category7",
-    menu_image: menu_7,
+    menu_name: "Cookbooks",
+    menu_image: cookbooks,
   },
   {
-    menu_name: "category8",
-    menu_image: menu_8,
+    menu_name: "Children",
+    menu_image: children,
+  },
+  {
+    menu_name: "Adventure",
+    menu_image: adventure,
+  },
+  {
+    menu_name: "Health and Wellness",
+    menu_image: health,
+  },
+  {
+    menu_name: "Philosophy",
+    menu_image: philosophy,
+  },
+  {
+    menu_name: "Art and Photography",
+    menu_image: art,
+  },
+  {
+    menu_name: "Poetry",
+    menu_image: poetry,
+  },
+  {
+    menu_name: "Religion",
+    menu_image: religion,
+  },
+  {
+    menu_name: "Sports",
+    menu_image: sports,
   },
 ];
-

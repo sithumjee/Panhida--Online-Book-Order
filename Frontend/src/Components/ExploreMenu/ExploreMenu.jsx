@@ -5,12 +5,16 @@ import { menu_list } from "../../assets/assets";
 const ExploreMenu = ({ category, setCategory }) => {
   return (
     <div className="exploreMenu" id="exploreMenu">
-      <h1>Explore our Menu</h1>
+      <h1>Explore Our Book Collection</h1>
       <p className="exploreMenu-text">
-        add some sentence here.add some sentence here.add some sentence here.add
-        some sentence here.add some sentence here.add some sentence hereadd some
-        sentence here
+        Discover a world of literary adventures in our extensive book
+        collection. Whether you're in the mood for a gripping novel, an
+        informative non-fiction title, or a captivating children's book, we have
+        something for every reader. Browse through our diverse genres and find
+        your next favorite read.
       </p>
+      <hr />
+
       <div className="exploreMenu-list">
         {menu_list.map((item, index) => {
           return (
@@ -28,7 +32,7 @@ const ExploreMenu = ({ category, setCategory }) => {
                 src={item.menu_image}
                 alt=""
               />
-              <p>{item.menu_name}</p>
+              <h3>{item.menu_name}</h3>
             </div>
           );
         })}

@@ -46,20 +46,20 @@ const Navbar = ({ setShowLogin }) => {
           >
             home
           </Link>
-          <a
-            href="#exploreMenu"
-            onClick={() => setMenu("menu")}
-            className={menu === "menu" ? "active" : ""}
+          <Link
+            to="/categories"
+            onClick={() => setMenu("categories")}
+            className={menu === "categories" ? "active" : ""}
           >
-            menu
-          </a>
-          <a
-            href="#appDownload"
-            onClick={() => setMenu("appDownload")}
-            className={menu === "appDownload" ? "active" : ""}
+            Categories
+          </Link>
+          <Link
+            to="/authors"
+            onClick={() => setMenu("authors")}
+            className={menu === "authors" ? "active" : ""}
           >
-            appDownload
-          </a>
+            Authors
+          </Link>
           <a
             href="#ContactUs"
             onClick={() => setMenu("ContactUs")}
@@ -99,6 +99,11 @@ const Navbar = ({ setShowLogin }) => {
               <li onClick={logOut}>
                 <img src={assets.logout_icon} alt="" />
                 <p>Logout</p>
+              </li>
+              <hr />
+              <li>
+                <img src={assets.logout_icon} alt="" />
+                <p>Settings</p>
               </li>
             </ul>
           </div>
