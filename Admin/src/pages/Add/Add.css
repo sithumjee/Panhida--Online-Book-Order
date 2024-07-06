@@ -3,10 +3,16 @@
   margin-left: max(5vw, 25px);
   margin-top: 50px;
   font-size: 16px;
+  margin-bottom: 40px;
 }
 
 .add form {
   gap: 30px;
+}
+
+.add p {
+  color: white;
+  font-size: 18px;
 }
 
 .add-img-upload img {
@@ -15,11 +21,13 @@
 }
 
 .add-name,
+.add-authorName,
 .add-description {
   width: max(40%, 280px);
 }
 
 .add-name input,
+.add-authorName input,
 .add-description textarea {
   background: white;
   padding: 10px;
@@ -32,12 +40,12 @@
 .add-price-category {
   display: flex;
   flex-direction: row;
-  gap: max(20px, 40px);
+  gap: max(20px, 65px);
 }
 
 .add-price-category select,
 .add-price-category input {
-  max-width: 120px;
+  max-width: 200px;
   padding: 10px;
   color: black;
   outline: none;
@@ -46,11 +54,17 @@
 }
 
 .add-button {
-  max-width: 120px;
-  padding: 10px;
+  max-width: 140px;
+  padding: 15px;
   border: none;
-  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 8px;
   cursor: pointer;
   background-color: tomato;
   color: black;
+  margin-left: 10px;
+}
+.add-button:hover {
+  background-color: rgb(225, 73, 73);
 }

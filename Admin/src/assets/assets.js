@@ -3,6 +3,7 @@ import profile_icon from "./profile_icon.png";
 import logout_icon from "./logout_icon.png";
 import logo from "./logo.png";
 import parcal from "./parcel_icon.png";
+import uploadArea from "./uploadArea.png";
 
 export const assets = {
   remove_icon_red,
@@ -10,4 +11,5 @@ export const assets = {
   parcal,
   logout_icon,
   logo,
+  uploadArea,
 };

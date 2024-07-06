@@ -3,7 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 4%;
-  margin: 10px 0px;
+  margin: 0 0px;
+  background-color: rgb(44, 42, 42);
 }
 
 .navbar .logo {

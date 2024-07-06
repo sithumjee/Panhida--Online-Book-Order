@@ -50,6 +50,7 @@ const List = ({ url }) => {
         <div className="list-table-format title">
           <b>Image</b>
           <b>Name</b>
+          <b>Author Name</b>
           <b>Category</b>
           <b>Price</b>
           <b>Action</b>
@@ -59,8 +60,9 @@ const List = ({ url }) => {
             <div key={index} className="list-table-format">
               <img src={`${url}/images/${item.image}`} alt={item.name} />
               <p>{item.name}</p>
+              <p>{item.authorName}</p>
               <p>{item.category}</p>
-              <p>RS{item.price}</p>
+              <p>{item.price}</p>
               <p onClick={() => removeFood(item._id)} className="cursor">
                 X
               </p>

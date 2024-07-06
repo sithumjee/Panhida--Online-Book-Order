@@ -40,7 +40,7 @@ const Order = ({ url }) => {
           <div key={index} className="order-item">
             <img src={assets.parcal} alt="" />
             <div>
-              <p className="order-item-food">
+              <p className="order-item-book">
                 {order.items.map((item, index) => {
                   if (index === order.items.length - 1) {
                     return item.name + " x " + item.quantity;
@@ -69,7 +69,7 @@ const Order = ({ url }) => {
               onChange={(event) => statusHandler(event, order._id)}
               value={order.status}
             >
-              <option value="Food Processing">Food Processing</option>
+              <option value="Book Processing">Book Processing</option>
               <option value="Out for Delivery">Out for Delivery</option>
               <option value="Delivered">Delivered</option>
             </select>

@@ -54,7 +54,7 @@ const Add = ({ url }) => {
           <p>Upload Image</p>
           <label htmlFor="image">
             <img
-              src={image ? URL.createObjectURL(image) : assets.profile_icon}
+              src={image ? URL.createObjectURL(image) : assets.uploadArea}
               alt=""
             />
           </label>
@@ -68,7 +68,7 @@ const Add = ({ url }) => {
         </div>
 
         <div className="add-name flex-col">
-          <p>Product Name</p>
+          <p>Book Name</p>
           <input
             onChange={onChangeHandler}
             value={data.name}
@@ -89,7 +89,7 @@ const Add = ({ url }) => {
           />
         </div>
         <div className="add-description flex-col">
-          <p>Product description</p>
+          <p>Book description</p>
           <textarea
             onChange={onChangeHandler}
             value={data.description}
@@ -102,7 +102,7 @@ const Add = ({ url }) => {
 
         <div className="add-price-category ">
           <div className="add-category flex-col">
-            <p>Product Category</p>
+            <p>Book Category</p>
             <select
               onChange={onChangeHandler}
               value={data.category}
@@ -130,7 +130,7 @@ const Add = ({ url }) => {
           </div>
 
           <div className="add-price flex-col">
-            <p>Product Price</p>
+            <p>Book Price</p>
             <input
               onChange={onChangeHandler}
               value={data.price}
