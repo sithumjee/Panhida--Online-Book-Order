@@ -1,0 +1,25 @@
+.latest-arrivals {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.latest-arrivals h1 {
+  font-size: max(3vw, 50 px);
+  font-weight: 600;
+  color: blue;
+}
+
+.latest-arrival-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-top: 20px;
+  margin-bottom: 30px;
+  gap: 30px;
+  row-gap: 50px;
+}
+.latest-arrivals hr {
+  margin: 10px 0px;
+  height: 4px;
+  background-color: rgb(0, 0, 0);
+  border: none;
+}
