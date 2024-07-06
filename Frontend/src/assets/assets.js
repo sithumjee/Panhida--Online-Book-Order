@@ -62,6 +62,19 @@ export const assets = {
   logoCircle,
 };
 
+export const author_list = [
+  { menu_name: "author1" },
+  { menu_name: "author2" },
+  { menu_name: "author3" },
+  { menu_name: "author4" },
+  { menu_name: "author5" },
+  { menu_name: "author6" },
+  { menu_name: "author7" },
+  { menu_name: "author8" },
+  { menu_name: "author9" },
+  { menu_name: "author10" },
+];
+
 export const menu_list = [
   {
     menu_name: "Fiction",

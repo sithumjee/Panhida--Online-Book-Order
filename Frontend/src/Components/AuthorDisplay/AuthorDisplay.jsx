@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import "./FoddDisplay.css";
+import "./AuthorDisplay.css";
 import { StoreContext } from "../../Context/StoreCntext";
 import FoodItem from "../FoodItem/FoodItem";
 
-const FoodDisplay = ({ category }) => {
+const AuthorDisplay = ({ authorName }) => {
   const { food_list } = useContext(StoreContext);
   return (
-    <div className="foodDisplay" id="foodDisplay">
-      <div className="food-display-list">
+    <div className="authorDisplay" id="authorDisplay">
+      <div className="author-display-list">
         {food_list.map((item, index) => {
-          if (category === "All" || category === item.category) {
+          if (authorName === "All" || authorName === item.authorName) {
             return (
               <FoodItem
                 key={index}
@@ -28,4 +28,4 @@ const FoodDisplay = ({ category }) => {
   );
 };
 
-export default FoodDisplay;
+export default AuthorDisplay;

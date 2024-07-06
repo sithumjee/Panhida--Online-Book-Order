@@ -4,7 +4,15 @@ import { assets } from "../../assets/assets";
 import { StoreContext } from "../../Context/StoreCntext";
 
 // eslint-disable-next-line react/prop-types
-const FoodItem = ({ id, name, authorName, description, image, price }) => {
+const FoodItem = ({
+  id,
+  name,
+  authorName,
+  description,
+  image,
+  price,
+  category,
+}) => {
   const { cartItems, addToCart, removeFromCart, url } =
     useContext(StoreContext);
   return (
@@ -37,11 +45,10 @@ const FoodItem = ({ id, name, authorName, description, image, price }) => {
       <div className="foodItem-info">
         <div className="foodItem-name">
           <p>{name}</p>
-          <img src={assets.rating_starts} alt="" />
         </div>
 
         <p className="foodItem-authorName">{authorName}</p>
-        <p className="foodItem-desc">{description}</p>
+        <p className="foodItem-category">{category}</p>
 
         <p className="foodItem-price">Rs {price}</p>
       </div>

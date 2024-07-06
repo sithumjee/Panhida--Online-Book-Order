@@ -1,0 +1,50 @@
+.findAuthor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: rgb(223, 221, 221);
+  padding-top: 100px;
+}
+
+.findAuthor h1 {
+  color: blue;
+  font-size: 3vw;
+}
+
+.findAuthor h2 {
+  color: black;
+  font-size: 20px;
+}
+
+.findAuthor-list {
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.findAuthor-list-item {
+  margin: 10px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.findAuthor-list-item h3 {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.findAuthor hr {
+  margin: 10px 0px;
+  height: 4px;
+  background-color: rgb(0, 0, 0);
+  border: none;
+}
+
+.findAuthor-list-item h3.activeAuthor {
+  border: 2px solid tomato !important;
+}

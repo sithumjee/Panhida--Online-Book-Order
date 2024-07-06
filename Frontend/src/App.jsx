@@ -9,6 +9,7 @@ import Login from "./Components/Login/Login";
 import Verify from "./Pages/Verify/Verify";
 import Myorders from "./Pages/Myorders/Myorders";
 import Categories from "./Pages/Categories/Categories";
+import AuthorPage from "./Pages/AuthorPage/AuthorPage";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/verify" element={<Verify />} />
           <Route path="/myorders" element={<Myorders />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/authors" element={<AuthorPage />} />
         </Routes>
       </div>
       <Footer />
