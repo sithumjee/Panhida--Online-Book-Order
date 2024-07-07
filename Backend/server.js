@@ -6,6 +6,7 @@ import userRouter from "./routes/userRoute.js";
 import "dotenv/config";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRouter.js";
+import schoolBookRouter from "./routes/schoolBookRoute.js";
 
 //=================app config========================
 
@@ -24,6 +25,7 @@ connectDB();
 //==============================API endpoints=========================
 
 app.use("/api/food", foodRouter);
+app.use("/api/schoolbooks", schoolBookRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
