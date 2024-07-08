@@ -60,10 +60,11 @@ const ListSchoolBooks = ({ url }) => {
         {list.map((item, index) => {
           return (
             <div key={index} className="list-table-format">
-              <img src={`${url}/uploads/${item.image}`} alt={item.name} />
+              <img src={`${url}/images/${item.image}`} alt={item.name} />
               <p>{item.title}</p>
               <p>{item.subject}</p>
               <p>{item.grade}</p>
+
               <p onClick={() => removeBook(item._id)} className="cursor">
                 X
               </p>

@@ -11,7 +11,7 @@ const schoolBookRouter = express.Router();
 //Image storage Engine
 
 const storage = multer.diskStorage({
-  destination: "uploadSchoolBooks",
+  destination: "uploads",
   filename: (req, file, cb) => {
     return cb(null, `${Date.now()}${file.originalname}`);
   },
