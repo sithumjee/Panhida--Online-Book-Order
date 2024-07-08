@@ -6,7 +6,7 @@ const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const url = "http://localhost:4000";
   const [token, setToken] = useState("");
-  const [food_list, setFoodList] = useState([]);
+  const [book_list, setBookList] = useState([]);
   const [school_book, setSchoolBooks] = useState([]);
 
   const addToCart = async (itemId) => {
@@ -47,7 +47,7 @@ const StoreContextProvider = (props) => {
     let totalAmount = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        let itemInfo = food_list.find((product) => product._id === item);
+        let itemInfo = book_list.find((product) => product._id === item);
         if (itemInfo) {
           totalAmount += parseFloat(itemInfo.price) * cartItems[item];
         }
@@ -56,9 +56,9 @@ const StoreContextProvider = (props) => {
     return totalAmount;
   };
 
-  const fetchFoodList = async () => {
-    const response = await axios.get(url + "/api/food/list");
-    setFoodList(response.data.data);
+  const fetchBookList = async () => {
+    const response = await axios.get(url + "/api/book/list");
+    setBookList(response.data.data);
   };
   const fetchSchoolBookList = async () => {
     const response = await axios.get(url + "/api/schoolbooks/listschoolbook");
@@ -76,7 +76,7 @@ const StoreContextProvider = (props) => {
 
   useEffect(() => {
     async function loadData() {
-      await fetchFoodList();
+      await fetchBookList();
       if (localStorage.getItem("token")) {
         setToken(localStorage.getItem("token"));
         await loadCartData(localStorage.getItem("token"));
@@ -96,7 +96,7 @@ const StoreContextProvider = (props) => {
   }, []);
 
   const contextValue = {
-    food_list,
+    book_list,
     cartItems,
     setCartItems,
     addToCart,

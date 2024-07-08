@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import "./LatestArrivals.css";
 import { StoreContext } from "../../Context/StoreCntext";
-import FoodItem from "../FoodItem/FoodItem";
+import BookItem from "../BookItem/BookItem";
 
 const FictionArrivals = () => {
-  const { food_list } = useContext(StoreContext);
-  const latest_list = food_list
+  const { book_list } = useContext(StoreContext);
+  const latest_list = book_list
     .filter((item) => item.category === "Fiction")
     .slice(-10);
 
@@ -15,7 +15,7 @@ const FictionArrivals = () => {
       <div className="latest-arrival-list">
         {latest_list.map((item, index) => {
           return (
-            <FoodItem
+            <BookItem
               key={index}
               id={item._id}
               name={item.name}

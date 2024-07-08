@@ -10,8 +10,8 @@ const AddSchoolbooks = ({ url }) => {
 
   const [data, setData] = useState({
     title: "",
-    subject: "",
-    grade: "",
+    subject: "Mathematics",
+    grade: "Grade 1",
   });
 
   const onChangeHandler = (event) => {
@@ -33,8 +33,8 @@ const AddSchoolbooks = ({ url }) => {
     if (response.data.success) {
       setData({
         title: "",
-        subject: "",
-        grade: "",
+        subject: "Mathematics",
+        grade: "Grade 1",
       });
       setImage(false);
       toast.success(response.data.message);

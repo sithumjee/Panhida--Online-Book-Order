@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import FindAuthor from "../../Components/FindAuthor/FindAuthor";
-import FoodDisplay from "../../Components/FoodDisply/FoodDisplay";
 import AuthorDisplay from "../../Components/AuthorDisplay/AuthorDisplay";
 
 const AuthorPage = () => {

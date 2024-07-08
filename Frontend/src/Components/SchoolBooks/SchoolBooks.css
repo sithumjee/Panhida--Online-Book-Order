@@ -1,0 +1,18 @@
+.schoolBooks {
+  margin-top: 110px;
+  padding: 20px;
+}
+
+.schoolBooks h1 {
+  font-size: max(2vw, 24 px);
+  font-weight: 600;
+  color: black;
+}
+
+.schoolBooks-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-top: 30px;
+  gap: 30px;
+  row-gap: 50px;
+}
