@@ -1,15 +1,17 @@
-import remove_icon_red from "./remove_icon_red.png";
+import addIcon from "./add.png";
 import profile_icon from "./profile_icon.png";
-import logout_icon from "./logout_icon.png";
+import listIcon from "./listIcon.png";
 import logo from "./logo.png";
 import parcal from "./parcel_icon.png";
 import uploadArea from "./uploadArea.png";
+import adminIcon from "./admin_icon.png";
 
 export const assets = {
-  remove_icon_red,
+  addIcon,
   profile_icon,
   parcal,
-  logout_icon,
+  listIcon,
   logo,
   uploadArea,
+  adminIcon,
 };

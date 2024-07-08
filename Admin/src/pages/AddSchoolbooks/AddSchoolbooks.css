@@ -1,0 +1,54 @@
+.addschoolbook {
+  width: 70%;
+  margin-left: max(5vw, 25px);
+  margin-top: 50px;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.addschoolbook form {
+  gap: 30px;
+}
+
+.addschoolbook p {
+  color: white;
+  font-size: 18px;
+}
+
+.addschoolbook-img-upload img {
+  width: 80px;
+  padding-top: 20px;
+}
+
+.addschoolbook-title,
+.addschoolbook-subject,
+.addschoolbook-grade {
+  width: max(40%, 280px);
+}
+
+.addschoolbook-title input,
+.addschoolbook-subject select,
+.addschoolbook-grade select {
+  background: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  outline: none;
+}
+
+.addschoolbook-button {
+  max-width: 180px;
+  padding: 15px;
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: tomato;
+  color: black;
+  margin-left: 10px;
+}
+.addschoolbook-button:hover {
+  background-color: rgb(225, 73, 73);
+}

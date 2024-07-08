@@ -8,9 +8,18 @@
   border: 1px solid tomato;
   margin-bottom: 30px;
 }
+
+.order-select {
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
 .order h3 {
   color: white;
   font-size: 30px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1000px) {

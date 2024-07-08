@@ -3,6 +3,7 @@ import { assets } from "../../assets/assets";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import "./AddSchoolbooks.css";
 
 const AddSchoolbooks = ({ url }) => {
   const [image, setImage] = useState(false);
@@ -73,53 +74,48 @@ const AddSchoolbooks = ({ url }) => {
           />
         </div>
 
-        <div className="add-category flex-col">
+        <div className="addschoolbook-subject flex-col">
           <p>Subject</p>
           <select
             onChange={onChangeHandler}
             value={data.subject}
             name="subject"
           >
-            <option value="Fiction"> Fiction</option>
-            <option value="Romance"> Romance</option>
-            <option value="Mystery and Triller"> Mystery and Triller</option>
+            <option value="Mathematics"> Mathematics</option>
+            <option value="Science"> Science</option>
+            <option value="Sinhala"> Sinhala</option>
+            <option value="Buddhism"> Buddhism</option>
+            <option value="English"> English</option>
+            <option value="Geography"> Geography</option>
+            <option value="Health"> Health</option>
+            <option value="ICT"> ICT</option>
+            <option value="Civics"> Civics</option>
             <option value="History"> History</option>
-            <option value="Personal Development"> Personal Development</option>
-            <option value="Business and Money"> Business and Money</option>
-            <option value="Cookbooks"> Cookbooks</option>
-            <option value="Children"> Children</option>
-            <option value="Adventure"> Adventure</option>
-            <option value="Health and Wellness"> Health and Wellness</option>
-            <option value="Philosophy"> Philosophy</option>
-            <option value="Art and Photography"> Art and Photography</option>
-            <option value="Poetry"> Poetry</option>
-            <option value="Religion"> Religion</option>
-            <option value="Sports"> Sports</option>
+            <option value="Music"> Music</option>
+            <option value="Commerce"> Commerce</option>
           </select>
         </div>
 
-        <div className="add-category flex-col">
+        <div className="addschoolbook-grade flex-col">
           <p>Grade</p>
           <select onChange={onChangeHandler} value={data.grade} name="grade">
-            <option value="Fiction"> Fiction</option>
-            <option value="Romance"> Romance</option>
-            <option value="Mystery and Triller"> Mystery and Triller</option>
-            <option value="History"> History</option>
-            <option value="Personal Development"> Personal Development</option>
-            <option value="Business and Money"> Business and Money</option>
-            <option value="Cookbooks"> Cookbooks</option>
-            <option value="Children"> Children</option>
-            <option value="Adventure"> Adventure</option>
-            <option value="Health and Wellness"> Health and Wellness</option>
-            <option value="Philosophy"> Philosophy</option>
-            <option value="Art and Photography"> Art and Photography</option>
-            <option value="Poetry"> Poetry</option>
-            <option value="Religion"> Religion</option>
-            <option value="Sports"> Sports</option>
+            <option value="Grade 1"> Grade 1</option>
+            <option value="Grade 2"> Grade 2</option>
+            <option value="Grade 3"> Grade 3</option>
+            <option value="Grade 4"> Grade 4</option>
+            <option value="Grade 5"> Grade 5</option>
+            <option value="Grade 6"> Grade 6</option>
+            <option value="Grade 7"> Grade 7</option>
+            <option value="Grade 8"> Grade 8</option>
+            <option value="Grade 9"> Grade 9</option>
+            <option value="Grade 10"> Grade 10</option>
+            <option value="Grade 11"> Grade 11</option>
+            <option value="Grade 12"> Grade 12</option>
+            <option value="Grade 13"> Grade 13</option>
           </select>
         </div>
 
-        <button type="submit" className="add-button">
+        <button type="submit" className="addschoolbook-button">
           AddSchoolbooks
         </button>
       </form>
