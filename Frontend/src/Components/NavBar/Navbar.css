@@ -92,6 +92,9 @@
 .navbar-profile {
   position: relative;
 }
+.navbar-profile img {
+  width: 30px;
+}
 
 .navbar-profile:hover .navprofile-dropdown {
   display: flex;

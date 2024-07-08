@@ -67,13 +67,13 @@ const Navbar = ({ setShowLogin }) => {
           >
             SchoolBooks
           </Link>
-          <a
-            href="#footer"
-            onClick={() => setMenu("footer")}
-            className={menu === "footer" ? "active" : ""}
+          <Link
+            to="/pastpapers"
+            onClick={() => setMenu("pastpapers")}
+            className={menu === "pastpapers" ? "active" : ""}
           >
-            footer
-          </a>
+            PastPapers
+          </Link>
         </ul>
       </div>
 

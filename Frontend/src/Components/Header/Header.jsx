@@ -33,11 +33,11 @@ const Header = () => {
           </Link>
 
           <div className="header-right-bottom">
-            <Link to="/aboutUs" className="header-button-add">
-              ReadMore
+            <Link to="/schoolBooks" className="header-button-add">
+              SchoolBooks
             </Link>
-            <Link to="/aboutUs" className="header-button-add">
-              ReadMore
+            <Link to="/pastpapers" className="header-button-add">
+              PastPapers
             </Link>
           </div>
         </div>
