@@ -15,7 +15,10 @@ const SchoolBookItem = ({ id, title, subject, grade, image }) => {
       </div>
       <div>
         <h3 className="schoolbook-item-subject">{subject}</h3>
-        <h3 className="schoolbook-item-grade">Grade :{grade}</h3>
+        <h3 className="schoolbook-item-grade">{grade}</h3>
+      </div>
+      <div>
+        <button className="schoolbookbutton">Download</button>
       </div>
     </div>
   );

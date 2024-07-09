@@ -21,3 +21,17 @@
   font-weight: 600;
   color: rgb(12, 12, 123);
 }
+
+.schoolbookbutton {
+  padding: 6px 10px;
+  align-self: center;
+  background-color: tomato;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.schoolbookbutton:hover {
+  background-color: rgb(241, 82, 53);
+}

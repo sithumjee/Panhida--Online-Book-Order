@@ -8,6 +8,7 @@ const StoreContextProvider = (props) => {
   const [token, setToken] = useState("");
   const [book_list, setBookList] = useState([]);
   const [school_book, setSchoolBooks] = useState([]);
+  const [pastPapers_list, setPastPapers] = useState([]);
 
   const addToCart = async (itemId) => {
     if (cartItems[itemId]) {
@@ -64,6 +65,10 @@ const StoreContextProvider = (props) => {
     const response = await axios.get(url + "/api/schoolbooks/listschoolbook");
     setSchoolBooks(response.data.data);
   };
+  const fetchPastPapersList = async () => {
+    const response = await axios.get(url + "/api/pastpapers/listPastPapers");
+    setPastPapers(response.data.data);
+  };
 
   const loadCartData = async (token) => {
     const response = await axios.post(
@@ -84,6 +89,7 @@ const StoreContextProvider = (props) => {
     }
     loadData();
   }, []);
+
   useEffect(() => {
     async function loadSchoolBooks() {
       await fetchSchoolBookList();
@@ -93,6 +99,17 @@ const StoreContextProvider = (props) => {
       }
     }
     loadSchoolBooks();
+  }, []);
+
+  useEffect(() => {
+    async function loadPastPapers() {
+      await fetchPastPapersList();
+      if (localStorage.getItem("token")) {
+        setToken(localStorage.getItem("token"));
+        await loadCartData(localStorage.getItem("token"));
+      }
+    }
+    loadPastPapers();
   }, []);
 
   const contextValue = {
@@ -106,6 +123,7 @@ const StoreContextProvider = (props) => {
     token,
     setToken,
     school_book,
+    pastPapers_list,
   };
 
   return (

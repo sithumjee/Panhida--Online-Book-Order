@@ -7,6 +7,7 @@ import "dotenv/config";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRouter.js";
 import schoolBookRouter from "./routes/schoolBookRoute.js";
+import pastPapersRouter from "./routes/pastPapersRoute.js";
 
 //=================app config========================
 
@@ -30,6 +31,7 @@ app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
+app.use("/api/pastpapers", pastPapersRouter);
 
 app.get("/", (req, res) => {
   res.send("Welcome to my API");
