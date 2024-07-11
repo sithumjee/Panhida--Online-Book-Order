@@ -1,7 +1,7 @@
 import bookModel from "../models/bookModel.js";
 import fs from "fs";
 
-//add food item
+//add book item
 
 const addBook = async (req, res) => {
   let image_filename = `${req.file.filename}`;
