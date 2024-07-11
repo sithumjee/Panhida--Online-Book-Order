@@ -1,5 +1,6 @@
 .placeorfer {
-  padding-top: 60px;
+  padding: 30px;
+  padding-top: 160px;
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -14,13 +15,14 @@
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 50px;
+  color: black;
 }
 
 .placeorder-left input {
   margin-bottom: 25px;
   width: 100%;
   padding: 10px;
-  border: 1px solid white;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
   outline-color: tomato;
   color: black;
@@ -29,6 +31,24 @@
 .placeorder-left .order-fields {
   display: flex;
   gap: 10px;
+}
+
+.placeorder-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  margin-right: 15vw;
+  padding: 5px 70px;
+  background-color: rgb(221, 226, 226);
+  border-radius: 10px;
+}
+
+.placeorder-right h2 {
+  color: black;
+}
+.placeorder-right p {
+  color: black;
 }
 
 @media (max-width: 1000px) {

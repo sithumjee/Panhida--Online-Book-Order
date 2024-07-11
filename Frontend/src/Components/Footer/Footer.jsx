@@ -8,8 +8,9 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
           <p>
-            add dummy text add dummy text add dummy text add dummy text add
-            dummy text add dummy text add dummy text{" "}
+            Discover a world of literature at your fingertips. Panhida is your
+            one-stop online ebook shop, where you can browse and order books
+            conveniently from the comfort of your home.
           </p>
 
           <div className="footer-social-icons">

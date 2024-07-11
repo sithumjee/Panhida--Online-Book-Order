@@ -9,6 +9,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddSchoolbooks from "./pages/AddSchoolbooks/AddSchoolbooks";
 import ListSchoolBooks from "./pages/ListSchoolBooks/ListSchoolBooks";
+import AddPastPapers from "./pages/addPastPapers/AddPastPapers";
+import ListPastPapers from "./pages/ListPastPapers/ListPastPapers";
 
 const App = () => {
   const url = "http://localhost:4000";
@@ -23,10 +25,15 @@ const App = () => {
           <Route path="/add" element={<Add url={url} />} />
           <Route path="/list" element={<List url={url} />} />
           <Route path="/order" element={<Order url={url} />} />
+          <Route path="/addpastpapers" element={<AddPastPapers url={url} />} />
           <Route path="/addschoolbook" element={<AddSchoolbooks url={url} />} />
           <Route
             path="/listschoolbook"
             element={<ListSchoolBooks url={url} />}
+          />
+          <Route
+            path="/listpastpapers"
+            element={<ListPastPapers url={url} />}
           />
         </Routes>
       </div>

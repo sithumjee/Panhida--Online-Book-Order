@@ -11,18 +11,30 @@ const Sidebar = () => {
           <img src={assets.addIcon} alt="" />
           <p>Add Books</p>
         </NavLink>
+
         <NavLink to="/addschoolbook" className="option">
           <img src={assets.addIcon} alt="" />
           <p>Add Schoolbooks</p>
+        </NavLink>
+
+        <NavLink to="/addpastpapers" className="option">
+          <img src={assets.addIcon} alt="" />
+          <p>Add PastPapers</p>
         </NavLink>
 
         <NavLink to="/list" className="option">
           <img src={assets.listIcon} alt="" />
           <p>List Books</p>
         </NavLink>
+
         <NavLink to="/listschoolbook" className="option">
           <img src={assets.listIcon} alt="" />
           <p>List SchoolBooks</p>
+        </NavLink>
+
+        <NavLink to="/listpastpapers" className="option">
+          <img src={assets.listIcon} alt="" />
+          <p>List PastPapers</p>
         </NavLink>
 
         <NavLink to="/order" className="option">

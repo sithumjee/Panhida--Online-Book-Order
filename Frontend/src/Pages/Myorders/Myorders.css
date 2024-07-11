@@ -23,13 +23,17 @@
   width: 50px;
 }
 
+.myorders-order p {
+  color: black;
+}
+
 .myorders-order p span {
   color: tomato;
 }
 
 .myorders-order p b {
   font-weight: 500;
-  color: yellow;
+  color: rgb(5, 11, 114);
 }
 
 .myorders-order button {

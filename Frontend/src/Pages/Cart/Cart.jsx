@@ -13,12 +13,12 @@ const Cart = () => {
     <div className="cart">
       <div className="cart-items">
         <div className="card-items-title">
-          <p>Items</p>
-          <p>Title</p>
-          <p>Price</p>
-          <p>Quantity</p>
-          <p>Total</p>
-          <p>Remove</p>
+          <h3>Items</h3>
+          <h3>Title</h3>
+          <h3>Price</h3>
+          <h3>Quantity</h3>
+          <h3>Total</h3>
+          <h3>Remove</h3>
         </div>
         <br />
         <hr />

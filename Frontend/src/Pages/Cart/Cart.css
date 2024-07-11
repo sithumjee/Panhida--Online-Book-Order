@@ -7,6 +7,16 @@
   grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
   align-items: center;
   font-size: max(1vw, 12px);
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.card-items-title h3 {
+  color: black;
+}
+.card-items-title p {
+  color: black;
+  font-weight: 500;
 }
 
 .card-items-item {
@@ -20,7 +30,7 @@
 .cart hr {
   height: 1px;
   border: none;
-  background-color: white;
+  background-color: rgb(52, 50, 50);
 }
 
 .card-items-item .cross {
@@ -30,7 +40,7 @@
 .cart-bottom {
   margin: 0px 6vw;
   border-radius: 10px;
-  box-shadow: 0 0 10px 10px rgba(1, 2, 3, 0.6);
+  box-shadow: 0 0 10px 10px rgba(1, 2, 3, 0.2);
   margin-top: 70px;
   display: flex;
   justify-content: center;
