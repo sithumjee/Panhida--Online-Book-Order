@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "./SchoolBookItem.css";
 import { StoreContext } from "../../Context/StoreCntext";
+import { Link } from "react-router-dom";
 
 const SchoolBookItem = ({ id, title, subject, grade, image }) => {
   const { school_book, url } = useContext(StoreContext);
@@ -18,7 +19,9 @@ const SchoolBookItem = ({ id, title, subject, grade, image }) => {
         <h3 className="schoolbook-item-grade">{grade}</h3>
       </div>
       <div>
-        <button className="schoolbookbutton">Download</button>
+        <Link to="/download/schoolbooks">
+          <button className="schoolbookbutton">Download</button>
+        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,29 @@
+.download-content {
+  min-height: 30vh;
+  display: grid;
+}
+
+.download-title {
+  color: black;
+  place-self: center;
+  padding-top: 150px;
+  padding-bottom: 40px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.download-content .spinner {
+  width: 100px;
+  height: 100px;
+  place-self: center;
+  border: 5px solid gainsboro;
+  border-top-color: tomato;
+  border-radius: 50%;
+  animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

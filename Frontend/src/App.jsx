@@ -12,6 +12,7 @@ import Categories from "./Pages/Categories/Categories";
 import AuthorPage from "./Pages/AuthorPage/AuthorPage";
 import SchoolBooks from "./Components/SchoolBooks/SchoolBooks";
 import PastPapers from "./Components/PastPapers/PastPapers";
+import Download from "./Pages/Download/Download";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/authors" element={<AuthorPage />} />
           <Route path="/schoolBooks" element={<SchoolBooks />} />
           <Route path="/pastpapers" element={<PastPapers />} />
+          <Route path="/download/schoolbooks" element={<Download />} />
         </Routes>
       </div>
       <Footer />

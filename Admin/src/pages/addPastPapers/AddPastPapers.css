@@ -27,7 +27,7 @@
 }
 
 .addpastpapers-part select,
-.addpastpapers-subject select,
+.addpastpapers-subject input,
 .addpastpapers-grade select {
   background: white;
   padding: 10px;

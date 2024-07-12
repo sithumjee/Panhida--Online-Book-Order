@@ -9,15 +9,16 @@ const ListPastPapers = ({ url }) => {
   const fetchList = async () => {
     try {
       const response = await axios.get(`${url}/api/pastpapers/listPastPapers`);
+      console.log("Response:", response.data);
 
       if (response.data.success) {
-        setList(response.data.data);
+        setList(response.data.pastPapers); // Assuming the backend returns the list in the 'pastPapers' property
       } else {
-        toast.error("Error fetching book list");
+        toast.error(response.data.message);
       }
     } catch (error) {
-      console.error(error);
-      toast.error("Error fetching book list");
+      console.error("Error:", error);
+      toast.error("Error fetching past papers list");
     }
   };
 
@@ -51,7 +52,6 @@ const ListPastPapers = ({ url }) => {
 
       <div className="list-table">
         <div className="list-table-format title">
-          <b>Image</b>
           <b>Title</b>
           <b>Subject</b>
           <b>Grade</b>

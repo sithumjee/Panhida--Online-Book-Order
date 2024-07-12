@@ -1,5 +1,4 @@
 import pastPapersModel from "../models/pastPapersModel.js";
-import fs from "fs";
 
 //add pastpaper
 
@@ -35,7 +34,7 @@ const listPastPapers = async (req, res) => {
 const removePastPapers = async (req, res) => {
   try {
     const pastPaper = await pastPapersModel.findById(req.body._id);
-
+    await pastPapersModel.findByIdAndDelete(req.body._id);
     res.json({ success: true, message: "book Removed" });
   } catch (error) {
     console.log(error);
