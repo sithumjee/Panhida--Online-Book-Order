@@ -16,3 +16,25 @@
   gap: 30px;
   row-gap: 50px;
 }
+
+.sc-searchbar {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  margin-bottom: 20px;
+  background-color: #ccc;
+  padding: 20px;
+  margin: 10 40px;
+}
+
+.sc-searchbar label {
+  color: black;
+}
+
+.schoolBookSearch-input {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  color: black;
+}

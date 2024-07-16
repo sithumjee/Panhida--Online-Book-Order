@@ -7,7 +7,7 @@ const addSchoolBook = async (req, res) => {
   let image_filename = `${req.file.filename}`;
 
   const SchoolBook = new schoolBookModel({
-    title: req.body.title,
+    part: req.body.part,
     grade: req.body.grade,
     subject: req.body.subject,
     image: image_filename,

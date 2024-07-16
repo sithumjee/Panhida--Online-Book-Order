@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const schoolBookSchema = new mongoose.Schema({
-  title: { type: String, required: true },
+  part: { type: String, required: true },
   grade: { type: String, required: true },
   subject: { type: String, required: true },
   image: { type: String, required: true },

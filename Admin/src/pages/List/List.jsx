@@ -13,28 +13,28 @@ const List = ({ url }) => {
       if (response.data.success) {
         setList(response.data.data);
       } else {
-        toast.error("Error fetching food list");
+        toast.error("Error fetching book list");
       }
     } catch (error) {
       console.error(error);
-      toast.error("Error fetching food list");
+      toast.error("Error fetching book list");
     }
   };
 
-  const removeFood = async (foodId) => {
+  const removeBook = async (bookId) => {
     try {
-      const response = await axios.post(`${url}/api/food/remove`, {
-        id: foodId,
+      const response = await axios.post(`${url}/api/book/remove`, {
+        _id: bookId,
       });
       if (response.data.success) {
-        toast.success("Food removed successfully");
+        toast.success("Book removed successfully");
         await fetchList();
       } else {
-        toast.error("Error removing food");
+        toast.error("Error removing book");
       }
     } catch (error) {
       console.error(error);
-      toast.error("Error removing food");
+      toast.error("Error removing book");
     }
   };
 
@@ -44,7 +44,7 @@ const List = ({ url }) => {
 
   return (
     <div className="list add flex-col">
-      <p>All Food List</p>
+      <p>All Book List</p>
 
       <div className="list-table">
         <div className="list-table-format title">
@@ -63,7 +63,7 @@ const List = ({ url }) => {
               <p>{item.authorName}</p>
               <p>{item.category}</p>
               <p>{item.price}</p>
-              <p onClick={() => removeFood(item._id)} className="cursor">
+              <p onClick={() => removeBook(item._id)} className="cursor">
                 X
               </p>
             </div>

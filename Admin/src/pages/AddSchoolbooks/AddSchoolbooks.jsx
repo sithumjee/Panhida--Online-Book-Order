@@ -9,9 +9,9 @@ const AddSchoolbooks = ({ url }) => {
   const [image, setImage] = useState(false);
 
   const [data, setData] = useState({
-    title: "",
     subject: "Mathematics",
     grade: "Grade 1",
+    part: "Part 1",
   });
 
   const onChangeHandler = (event) => {
@@ -22,7 +22,7 @@ const AddSchoolbooks = ({ url }) => {
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     const formData = new FormData();
-    formData.append("title", data.title);
+    formData.append("part", data.part);
     formData.append("subject", data.subject);
     formData.append("grade", data.grade);
     formData.append("image", image);
@@ -32,9 +32,9 @@ const AddSchoolbooks = ({ url }) => {
     );
     if (response.data.success) {
       setData({
-        title: "",
         subject: "Mathematics",
         grade: "Grade 1",
+        part: "Part 1",
       });
       setImage(false);
       toast.success(response.data.message);
@@ -60,17 +60,6 @@ const AddSchoolbooks = ({ url }) => {
             id="image"
             hidden
             required
-          />
-        </div>
-
-        <div className="addschoolbook-title flex-col">
-          <p>Book Title</p>
-          <input
-            onChange={onChangeHandler}
-            value={data.title}
-            type="text"
-            name="title"
-            placeholder="Enter"
           />
         </div>
 
@@ -115,8 +104,16 @@ const AddSchoolbooks = ({ url }) => {
           </select>
         </div>
 
+        <div className="addschoolbook-title flex-col">
+          <p>PastPaper Part</p>
+          <select onChange={onChangeHandler} value={data.part} name="part">
+            <option value="Part 1"> Part 1</option>
+            <option value="Part 2"> Part 2</option>
+          </select>
+        </div>
+
         <button type="submit" className="addschoolbook-button">
-          AddSchoolbooks
+          Add PastPapers
         </button>
       </form>
     </div>

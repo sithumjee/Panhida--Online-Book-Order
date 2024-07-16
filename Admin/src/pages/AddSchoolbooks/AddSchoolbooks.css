@@ -26,7 +26,7 @@
   width: max(40%, 280px);
 }
 
-.addschoolbook-title input,
+.addschoolbook-title select,
 .addschoolbook-subject select,
 .addschoolbook-grade select {
   background: white;

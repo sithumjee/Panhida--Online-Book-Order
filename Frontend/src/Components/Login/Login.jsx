@@ -51,20 +51,19 @@ const Login = ({ setShowLogin }) => {
 
   return (
     <div className="login">
+      <div className="overlay" onClick={() => setShowLogin(false)}></div>
       <form onSubmit={onLogin} className="login-container">
         <div className="login-title">
           <h2>{currentState}</h2>
           <img
             onClick={() => setShowLogin(false)}
             src={assets.cross_icon}
-            alt=""
+            alt="Close"
           />
         </div>
 
         <div className="login-input">
-          {currentState === "Login" ? (
-            <></>
-          ) : (
+          {currentState === "Login" ? null : (
             <input
               name="name"
               onChange={onChangeHandler}
@@ -110,9 +109,7 @@ const Login = ({ setShowLogin }) => {
         ) : (
           <p>
             Already have an account?
-            <span onClick={() => SetCurrentState("Login")}>
-              Login Here
-            </span>{" "}
+            <span onClick={() => SetCurrentState("Login")}>Login Here</span>
           </p>
         )}
       </form>

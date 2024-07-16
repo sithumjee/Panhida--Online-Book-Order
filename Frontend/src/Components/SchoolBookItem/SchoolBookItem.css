@@ -22,6 +22,11 @@
   color: rgb(12, 12, 123);
 }
 
+.schoolbook-item span {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
 .schoolbookbutton {
   padding: 6px 10px;
   align-self: center;

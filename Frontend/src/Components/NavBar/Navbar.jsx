@@ -65,14 +65,7 @@ const Navbar = ({ setShowLogin }) => {
             onClick={() => setMenu("schoolBooks")}
             className={menu === "schoolBooks" ? "active" : ""}
           >
-            SchoolBooks
-          </Link>
-          <Link
-            to="/pastpapers"
-            onClick={() => setMenu("pastpapers")}
-            className={menu === "pastpapers" ? "active" : ""}
-          >
-            PastPapers
+            School PastPapers
           </Link>
         </ul>
       </div>

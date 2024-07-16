@@ -34,10 +34,10 @@ const Header = () => {
 
           <div className="header-right-bottom">
             <Link to="/schoolBooks" className="header-button-add">
-              SchoolBooks
-            </Link>
-            <Link to="/pastpapers" className="header-button-add">
               PastPapers
+            </Link>
+            <Link to="/myorders" className="header-button-add">
+              My Orders
             </Link>
           </div>
         </div>

@@ -26,18 +26,18 @@ const ListSchoolBooks = ({ url }) => {
       const response = await axios.post(
         `${url}/api/schoolbooks/removeschoolbook`,
         {
-          id: bookId,
+          _id: bookId,
         }
       );
       if (response.data.success) {
-        toast.success("Food removed successfully");
+        toast.success("Book removed successfully");
         await fetchList();
       } else {
-        toast.error("Error removing Food");
+        toast.error("Error removing Book");
       }
     } catch (error) {
       console.error(error);
-      toast.error("Error removing Food");
+      toast.error("Error removing Book");
     }
   };
 
@@ -52,7 +52,7 @@ const ListSchoolBooks = ({ url }) => {
       <div className="list-table">
         <div className="list-table-format title">
           <b>Image</b>
-          <b>Title</b>
+          <b>Part</b>
           <b>Subject</b>
           <b>Grade</b>
           <b>Action</b>
@@ -61,7 +61,7 @@ const ListSchoolBooks = ({ url }) => {
           return (
             <div key={index} className="list-table-format">
               <img src={`${url}/images/${item.image}`} alt={item.name} />
-              <p>{item.title}</p>
+              <p>{item.part}</p>
               <p>{item.subject}</p>
               <p>{item.grade}</p>
 
