@@ -19,6 +19,10 @@ const BookItem = ({
     <div className="bookItem">
       <div className="bookItem-container">
         <img alt="" className="bookItem-image" src={url + "/images/" + image} />
+      </div>
+
+      <div className="addItem">
+        <p>Add Item</p>
         {!cartItems[id] ? (
           <img
             className="add"

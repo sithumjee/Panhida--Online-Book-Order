@@ -12,9 +12,9 @@
 
 .book-display-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 30px;
-  gap: 30px;
+  gap: 20px;
   row-gap: 50px;
 }
 
@@ -34,4 +34,21 @@
   padding-left: 10px;
   border-radius: 6px;
   color: black;
+}
+
+@media (max-width: 1300px) {
+  .book-display-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  .book-display-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .book-display-list {
+    grid-template-columns: 1fr;
+  }
 }
