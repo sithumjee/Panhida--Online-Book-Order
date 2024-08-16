@@ -101,3 +101,9 @@ video {
 .header-button-add:hover {
   background-color: #870c0c;
 }
+
+@media (max-width: 750px) {
+  .headerButtonContainerr {
+    display: none;
+  }
+}

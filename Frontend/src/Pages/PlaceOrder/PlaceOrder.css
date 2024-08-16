@@ -59,5 +59,6 @@
   .placeorder-right {
     width: 100%;
     text-align: center;
+    margin-right: 20px;
   }
 }

@@ -36,6 +36,7 @@ import parcel_icon from "./parcel_icon.png";
 import HeaderBg from "./headerBg.mp4";
 import topicImage from "./topicImage.png";
 import logoCircle from "./logoCircle.png";
+import menuList from "./menulist.png";
 
 export const assets = {
   logo,
@@ -60,6 +61,7 @@ export const assets = {
   HeaderBg,
   topicImage,
   logoCircle,
+  menuList,
 };
 
 export const author_list = [

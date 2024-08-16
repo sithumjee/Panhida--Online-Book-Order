@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,6 +8,21 @@ const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const { TotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 750);
+
+  // Update the screen size state on resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 750);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   //reducing the opacity when scrolling-------------------------------------------------------------------------------------
   window.addEventListener("scroll", () => {
@@ -32,8 +47,31 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className="navbar">
       <div className="left-navbar">
+        {!isSmallScreen ? (
+          ""
+        ) : (
+          <div className="navbar-listdownmenu">
+            <img className="listmenuImg" src={assets.menuList} alt="" />
+            <ul className="listdownmenu-dropdown">
+              <li onClick={() => navigate("/categories")}>
+                <img src={assets.bag_icon} alt="" />
+                <p>Categories</p>
+              </li>
+              <hr />
+              <li onClick={() => navigate("/authors")}>
+                <img src={assets.logout_icon} alt="" />
+                <p>Authors</p>
+              </li>
+              <hr />
+              <li onClick={() => navigate("/schoolBooks")}>
+                <img src={assets.logout_icon} alt="" />
+                <p>PastPapers</p>
+              </li>
+            </ul>
+          </div>
+        )}
         <Link to="/">
-          <img src={assets.logo} alt="" />
+          <img className="logoImg" src={assets.logo} alt="" />
         </Link>
       </div>
 

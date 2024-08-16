@@ -38,7 +38,7 @@ const Add = ({ url }) => {
         authorName: "",
         description: "",
         price: "",
-        category: "category1",
+        category: "Fiction",
       });
       setImage(false);
       toast.success(response.data.message);

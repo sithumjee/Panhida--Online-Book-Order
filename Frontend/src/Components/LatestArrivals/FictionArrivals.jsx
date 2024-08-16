@@ -7,7 +7,7 @@ const FictionArrivals = () => {
   const { book_list } = useContext(StoreContext);
   const latest_list = book_list
     .filter((item) => item.category === "Fiction")
-    .slice(-10);
+    .slice(-5);
 
   return (
     <div className="latest-arrivals">
