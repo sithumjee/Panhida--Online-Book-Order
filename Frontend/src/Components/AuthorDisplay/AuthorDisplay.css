@@ -10,8 +10,25 @@
 
 .author-display-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 30px;
   gap: 30px;
   row-gap: 50px;
+}
+
+@media (max-width: 1300px) {
+  .author-display-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  .author-display-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .author-display-list {
+    grid-template-columns: 1fr;
+  }
 }

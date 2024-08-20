@@ -103,7 +103,7 @@ const Navbar = ({ setShowLogin }) => {
             onClick={() => setMenu("schoolBooks")}
             className={menu === "schoolBooks" ? "active" : ""}
           >
-            School PastPapers
+            PastPapers
           </Link>
         </ul>
       </div>
