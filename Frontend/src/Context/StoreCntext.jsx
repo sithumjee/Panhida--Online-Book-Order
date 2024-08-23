@@ -4,7 +4,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = "http://localhost:4000";
+  const url = "https://panhida-online-book-order-backend.onrender.com";
   const [token, setToken] = useState("");
   const [book_list, setBookList] = useState([]);
   const [school_book, setSchoolBooks] = useState([]);
