@@ -17,7 +17,13 @@ const port = process.env.PORT || 4000;
 //==================middelware========================
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https//deploy-mern-lwhq.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 //==========================database connection======================\
 

@@ -4,15 +4,7 @@ import { assets } from "../../assets/assets";
 import { StoreContext } from "../../Context/StoreCntext";
 
 // eslint-disable-next-line react/prop-types
-const BookItem = ({
-  id,
-  name,
-  authorName,
-  description,
-  image,
-  price,
-  category,
-}) => {
+const BookItem = ({ id, name, authorName, image, price, category }) => {
   const { cartItems, addToCart, removeFromCart, url } =
     useContext(StoreContext);
   return (
